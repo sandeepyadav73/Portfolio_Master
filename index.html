@@ -586,12 +586,11 @@
                 </p>
 
                 <!-- Contact Form -->
-                <form action="YOUR_FORMSPREE_ENDPOINT" method="POST"
-                    class="contact-form space-y-6 p-8 bg-gray-50 rounded-xl shadow-2xl">
-                    <input type="text" name="name" placeholder="Your Name" required
+                 <form id="contact-form" class="contact-form space-y-6 p-8 bg-gray-50 rounded-xl shadow-2xl">
+                    <input type="text" name="from_name" placeholder="Your Name" required
                         class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200">
 
-                    <input type="email" name="_replyto" placeholder="Your Email" required
+                    <input type="email" name="reply_to" placeholder="Your Email" required
                         class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200">
 
                     <textarea name="message" placeholder="Your Message" rows="5" required
@@ -722,6 +721,32 @@
 
 
     <script src="assets/js/main.js"></script>
+     <script>
+        (function () {
+            // Apni Public Key yaha dalein
+            emailjs.init("PlmcHzBVecUJ1rkoF");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Button text change karein (Loading state)
+            const btn = this.querySelector('button');
+            btn.innerText = 'Sending...';
+
+            // EmailJS ko form data bhejein
+            emailjs.sendForm('service_23funlp', 'template_vchc97i', this)
+                .then(function () {
+                    alert('Message Sent Successfully!');
+                    btn.innerText = 'Send Message';
+                    document.getElementById('contact-form').reset(); // Form clear karein
+                }, function (error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                    btn.innerText = 'Send Message';
+                });
+        });
+    </script>
 </body>
+
 
 </html>
