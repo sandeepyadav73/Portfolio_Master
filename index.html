@@ -462,7 +462,7 @@
                         <div class="flex flex-wrap gap-3">
                             <span
                                 class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">Python
-                                </span>
+                            </span>
                             <span
                                 class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">JavaScript
                                 (Basic)</span>
@@ -585,8 +585,7 @@
                     Have a project idea or just want to chat? Send me a message!
                 </p>
 
-                <!-- Contact Form -->
-                 <form id="contact-form" class="contact-form space-y-6 p-8 bg-gray-50 rounded-xl shadow-2xl">
+                <form id="contact-form" class="contact-form space-y-6 p-8 bg-gray-50 rounded-xl shadow-2xl">
                     <input type="text" name="from_name" placeholder="Your Name" required
                         class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200">
 
@@ -601,6 +600,9 @@
                         Send Message
                     </button>
                 </form>
+
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
                 <p class="contact-fallback text-center mt-8 text-gray-600">
                     Or, email me directly at
@@ -721,7 +723,7 @@
 
 
     <script src="assets/js/main.js"></script>
-     <script>
+    <script>
         (function () {
             // Apni Public Key yaha dalein
             emailjs.init("PlmcHzBVecUJ1rkoF");
@@ -747,6 +749,5 @@
         });
     </script>
 </body>
-
 
 </html>
