@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep Yadav | Professional Portfolio</title>
+    <meta name="description" content="A B.Tech (CSE, Data Science) student and aspiring Software Developer portfolio.">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="initializeAnimations()">
+
+    <!-- STICKY HEADER -->
+    <header class="header fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="logo text-2xl font-extrabold text-white tracking-wider">
+                Sandeep<span class="text-indigo-400">.Dev</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="navbar hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a>
+                <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-indigo-400 transition">Experience</a>
+                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-icon md:hidden text-white text-2xl cursor-pointer" onclick="toggleMenu()">
+                <i class="fas fa-bars" id="menu-icon-bars"></i>
+                <i class="fas fa-times hidden" id="menu-icon-times"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <nav class="navbar md:hidden absolute top-full left-0 w-full bg-gray-900/95 transform -translate-x-full transition-transform duration-300 shadow-xl"
+            id="mobile-menu">
+            <a href="#about" onclick="toggleMenu()"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800 border-b border-gray-700">About</a>
+            <a href="#projects" onclick="toggleMenu()"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800 border-b border-gray-700">Projects</a>
+            <a href="#skills" onclick="toggleMenu()"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800 border-b border-gray-700">Skills</a>
+            <a href="#experience" onclick="toggleMenu()"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800 border-b border-gray-700">Experience</a>
+            <a href="#contact" onclick="toggleMenu()"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800">Contact</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow pt-16">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-bg min-h-screen flex items-center justify-center p-6 text-white shadow-xl">
+            <div class="container mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12 py-16" id="hi">
+
+                    <!-- Hero Content (Left Side) -->
+                    <div class="hero-content text-center md:text-left md:w-1/2">
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg"
+                            style="text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);">
+                            Hi, I'm <span class="text-indigo-400">Sandeep Kumar</span>.
+                        </h1>
+                        <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
+                            Aspiring Software Developer building web applications and data-driven tools.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="cta-buttons flex justify-center md:justify-start space-x-4">
+                            <a href="./resume/Sandeep_Yadav_Final_Resume[1].pdf" download
+                                class="btn primary bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-lg shadow-indigo-500/50 transform hover:scale-105">
+                                Resume Download
+                            </a>
+                            <a href="#contact"
+                                class="btn secondary border border-gray-500 hover:border-indigo-500 text-gray-200 hover:text-indigo-400 font-semibold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image (Right Side) -->
+                    <div class="hi">
+                        <img src="assets/images/profile.png" alt="Sandeep Yadav Profile Picture"
+                            class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-indigo-500 shadow-2xl transition duration-500 hover:shadow-indigo-500/80 transform hover:rotate-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="about-section section-padding bg-white">
+            <div class="container mx-auto max-w-4xl text-gray-800 animated-element">
+                <h2
+                    class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-indigo-500 inline-block px-4 pb-2">
+                    About Me
+                </h2>
+                <div
+                    class="about-content space-y-6 text-lg leading-relaxed text-gray-700 bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p>
+                        Hi, I’m **Sandeep Yadav** — a B.Tech (CSE, Data Science) student and aspiring Software
+                        Developer. I build web applications and data-driven tools using Python, JavaScript, and modern
+                        web tech.
+                    </p>
+                    <p class="font-semibold text-gray-800">
+                        Currently focused on improving full-stack skills and building product-focused projects that
+                        solve real-world problems efficiently. I thrive on clean code, complex challenges, and
+                        continuous learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PROJECTS SECTION -->
+        <section id="projects" class="projects-section section-padding bg-gray-100">
+            <div class="container mx-auto max-w-7xl animated-element animate-delay-1">
+                <h2
+                    class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-indigo-500 inline-block px-4 pb-2">
+                    Featured Projects
+                </h2>
+
+                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Project Card 1: Wander-World (Mock Data) -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/wanderworld.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">WanderWorld</h3>
+                            <p class="text-gray-600 mb-4 text-sm">WanderWorld is an immersive travel planning and
+                                discovery platform designed to empower travelers to explore every corner of the globe,
+                                meticulously plan their journeys, and curate unforgettable experiences.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
+                                    CSS</span>
+                                <!-- <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span> -->
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Wander-World-/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Wander-World-" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 2: Data Tool (Mock Data) -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/idcard.png" alt="Data Visualization Dashboard Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">ID_Card_Prevention_App </h3>
+                            <p class="text-gray-600 mb-4 text-sm">A lightweight, responsive, and secure Flask-based
+                                web application for verifying student identity using their unique ID. Designed to
+                                prevent
+                                unauthorized access using fake ID cards in college environments.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Python</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Flask</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML5/CSS3</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">SQLite</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Gunicorn
+                                    (for deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href=" https://id-card-prevention-app.onrender.com" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/ID_Card_Prevention_App" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: Portfolio Site itself (Mock Data) -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/portfolio.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Personal Portfolio v3</h3>
+                            <p class="text-gray-600 mb-4 text-sm">A sleek and responsive personal portfolio website
+                                built using Tailwind CSS and pure JavaScript.
+                                It showcases professional skills, projects, and certifications in a clean, modern
+                                layout. </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML/CSS</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Portfolio_Master/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Portfolio_Master" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4: Foodie a Resturent (Mock Data) -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/foodei.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Foodie</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Foodie is a modern and engaging
+                                online platform designed to create a seamless connection between food enthusiasts and
+                                restaurants. This website beautifully showcases a restaurant's delectable dishes, unique
+                                ambiance, and services through stunning visuals and intuitive navigation. </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
+                                    CSS</span>
+                                <!-- <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span> -->
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Foodie-/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Foodie-" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 5: TechNova_Landing_Page (Mock Data) -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/technova.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">TechNova Landing Page</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                TechNova_Landing_Page is a modern and dynamic web page meticulously designed to
+                                effectively present TechNova's latest tech products, services, or a specific marketing
+                                campaign.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
+                                    CSS</span>
+                                <!-- <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span> -->
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/TechNova_Landing_Page/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/TechNova_Landing_Page" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Project Card 6: calculator -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <!-- Placeholder image, actual path in original HTML was "assets/images/project1.png" -->
+                        <img src="assets/images/calculator.png" alt="RoomMitra Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Responsive_Calculator</h3>
+                            <p class="text-gray-600 mb-4 text-sm">A modern and fully responsive calculator built using
+                                HTML, CSS, and JavaScript.
+                                It performs basic arithmetic operations like addition, subtraction, multiplication, and
+                                division with a clean and user-friendly interface.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">CSS</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Responsive_calculator/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Responsive_calculator/" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 7: Digit_prediction_system -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/digit.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Digit_prediction_system</h3>
+                            <p class="text-gray-600 mb-4 text-sm">This project is a functional Machine Learning
+                                application that recognizes handwritten digits (0–9).
+                                It uses a Support Vector Machine (SVM) classifier along with an interactive OpenCV-based
+                                drawing canvas, allowing real-time digit recognition from user input.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Python</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Sckit-Learn</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">OpenCV</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">NumPy</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Pandas</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://github.com/sandeepyadav73/Digit_prediction_system" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Digit_prediction_system" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 8: Random Password Generator -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/pwd.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Random PWD Generator</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Random Password Generator, a sleek,
+                                space-themed web application designed to forge passwords as strong as a supernova. This
+                                tool allows users to create secure, customizable passwords with just one click, helping
+                                to prevent security breaches with strong, unique credentials..</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML/CSS</span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FastAPI
+                                </span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Random-Password-Generator/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Random-Password-Generator" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 9: Logical_cube -->
+                    <article
+                        class="project-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl">
+                        <img src="assets/images/cube.png" alt="Personal Portfolio Project Screenshot"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Logical_cube
+                            </h3>
+                            <p class="text-gray-600 mb-4 text-sm">The Cube ek fully interactive aur highly customizable
+                                3D Rubik's Cube puzzle game hai, jise web technologies aur Three.js ka use karke banaya
+                                gaya hai. Yeh project logical reasoning ko improve karne aur ek realistic puzzle-solving
+                                experience provide karne ke liye design kiya gaya hai.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">HTML/CSS</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Cube
+                                    Logic
+                                </span>
+                                <span
+                                    class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
+                                <span class="text-xs font-medium bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Git
+                                    Hub(for Deployment)</span>
+                            </div>
+                            <div class="project-links flex space-x-4">
+                                <a href="https://sandeepyadav73.github.io/Logical_cube/" target="_blank"
+                                    class="link-btn text-indigo-600 hover:text-indigo-800 font-semibold transition">
+                                    Live Demo <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                                <a href="https://github.com/sandeepyadav73/Logical_cube" target="_blank"
+                                    class="link-btn text-gray-600 hover:text-gray-900 transition">
+                                    GitHub Repo <i class="fab fa-github ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SKILLS SECTION -->
+        <section id="skills" class="skills-section section-padding bg-white">
+            <div class="container mx-auto max-w-7xl animated-element animate-delay-2">
+                <h2
+                    class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-indigo-500 inline-block px-4 pb-2">
+                    Technical Skills
+                </h2>
+                <div class="skills-categories grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Skill Group 1: Programming Languages -->
+                    <div class="skill-group p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900 flex items-center"><i
+                                class="fas fa-code text-indigo-500 mr-3"></i> Programming</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">Python
+                                </span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">JavaScript
+                                (Basic)</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group 2: Web Technologies -->
+                    <div class="skill-group p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900 flex items-center"><i
+                                class="fas fa-globe text-indigo-500 mr-3"></i> Web Technologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">HTML5</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">CSS3
+                                (Flexbox/Grid)</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">Tailwind
+                                CSS</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">JavaScript
+                                (ES6+)</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">React.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group 3: Backend & Data -->
+                    <div class="skill-group p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900 flex items-center"><i
+                                class="fas fa-server text-indigo-500 mr-3"></i> Backend & Data</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">Flask/Django</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">FastAPI</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">Git/GitHub</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">MySQL</span>
+                            <span
+                                class="skill-chip bg-indigo-100 text-indigo-800 px-4 py-1.5 rounded-full font-medium">MongoDB</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCE SECTION (Timeline) -->
+        <section id="experience" class="experience-section section-padding bg-gray-900 text-gray-100">
+            <div class="container mx-auto max-w-4xl animated-element animate-delay-3">
+                <h2
+                    class="text-4xl font-extrabold text-center mb-16 text-white border-b-4 border-indigo-500 inline-block px-4 pb-2">
+                    Internship & Experience
+                </h2>
+
+                <div class="timeline relative pl-4 md:pl-8 border-l-4 border-indigo-500 space-y-12">
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item relative">
+                        <!-- Timeline Dot -->
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 top-1 md:-left-2.5 transform -translate-x-1/2">
+                        </div>
+
+                        <div class="ml-4 md:ml-8 p-6 bg-gray-800 rounded-xl shadow-2xl">
+                            <h3 class="text-2xl font-bold text-indigo-400 mb-1">SKVO Software — Software
+                                Development Intern</h3>
+                            <p class="text-sm font-medium text-gray-400 mb-4">May 2025 - Aug 2025 (3 Months)</p>
+
+                            <ul class="list-disc list-outside ml-5 space-y-3 text-gray-300">
+                                <li>**Optimized** data processing pipelines using **Python** and **SQL**, resulting in a
+                                    **40% reduction** in nightly report generation time.</li>
+                                <li>Developed a user-facing dashboard module in **React.js** to visualize key
+                                    operational metrics, improving manager oversight.</li>
+                                <li>Collaborated within a cross-functional team, utilizing **Git** and agile
+                                    methodologies for version control and task management.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 (Mock Data) -->
+                    <div class="timeline-item relative">
+                        <!-- Timeline Dot -->
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 top-1 md:-left-2.5 transform -translate-x-1/2">
+                        </div>
+
+                        <div class="ml-4 md:ml-8 p-6 bg-gray-800 rounded-xl shadow-2xl">
+                            <h3 class="text-2xl font-bold text-indigo-400 mb-1">CRISP — Data Science
+                                Intern</h3>
+                            <p class="text-sm font-medium text-gray-400 mb-4">Feb 2023 - March 2023 (1 month)</p>
+
+                            <ul class="list-disc list-outside ml-5 space-y-3 text-gray-300">
+                                <li>Developed an interactive R-based dashboard to classify the Iris dataset with 92%
+                                    accuracy, focusing on data visualization and model evaluation during internship at
+                                    CRISP.</li>
+                                <li>Managed large datasets using **R-Libraries** and utilized visualization libraries
+                                    for
+                                    exploratory data analysis.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT SECTION -->
+        <section id="contact" class="contact-section section-padding bg-white">
+            <div class="container mx-auto max-w-3xl animated-element animate-delay-4">
+                <h2
+                    class="text-4xl font-extrabold text-center mb-12 text-gray-900 border-b-4 border-indigo-500 inline-block px-4 pb-2">
+                    Get In Touch
+                </h2>
+                <p class="text-center text-lg text-gray-600 mb-8">
+                    Have a project idea or just want to chat? Send me a message!
+                </p>
+
+                <!-- Contact Form -->
+                <form action="YOUR_FORMSPREE_ENDPOINT" method="POST"
+                    class="contact-form space-y-6 p-8 bg-gray-50 rounded-xl shadow-2xl">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200">
+
+                    <input type="email" name="_replyto" placeholder="Your Email" required
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200">
+
+                    <textarea name="message" placeholder="Your Message" rows="5" required
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-200"></textarea>
+
+                    <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                </form>
+
+                <p class="contact-fallback text-center mt-8 text-gray-600">
+                    Or, email me directly at
+                    <a href="mailto:ravindrayadav4367@gmail.com"
+                        class="text-indigo-600 hover:underline font-medium">ravindrayadav4367@gmail.com</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PROFESSIONAL FOOTER SECTION -->
+    <footer class="bg-gray-900 text-gray-300 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-12 lg:py-16">
+
+            <!-- 1. MAIN GRID SECTION: Navigation, Info, and Newsletter -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-gray-700 pb-12">
+
+                <!-- COLUMN 1: Brand & Contact Info -->
+                <div class="col-span-2 lg:col-span-1">
+                    <a href="#hero" class="text-2xl font-extrabold text-white tracking-widest uppercase">
+                        Sandeep<span class="text-indigo-400">.Dev</span>
+                    </a>
+                    <p class="mt-4 text-sm text-gray-400 max-w-xs">
+                        Building the future of digital solutions, one product at a time.
+                    </p>
+                    <div class="mt-6 text-sm">
+                        <p class="font-semibold text-white">Contact:</p>
+                        <p class="text-gray-400">ravindrayadav4367@gmail.com</p>
+                        <p class="text-gray-400">7322815406</p>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: Navigation Links -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white uppercase tracking-wider">Navigation</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="footer-link">About Me</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                        <li><a href="#experience" class="footer-link">Experience</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMN 3 & 4 (Mock links, simplified for a personal site) -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white uppercase tracking-wider">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="footer-link">My Blog (Soon)</a></li>
+                        <li><a href="./resume/Sandeep_Yadav_Resume.pdf" class="footer-link">Download Resume</a></li>
+                        <li><a href="#" class="footer-link">Mentorship</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMN 5: Newsletter Signup (CTA) -->
+                <div class="col-span-2 sm:col-span-3 lg:col-span-2">
+                    <h3 class="text-lg font-semibold text-white uppercase tracking-wider">Stay Updated</h3>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Subscribe for occasional updates on new projects and tech articles.
+                    </p>
+                    <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                        <input type="email" id="newsletter-email" placeholder="Your email address"
+                            class="w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-sm" />
+                        <button onclick="subscribe()"
+                            class="flex-shrink-0 bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition duration-150">
+                            Submit
+                        </button>
+                    </div>
+                    <p id="subscribe-message" class="mt-2 text-sm italic text-indigo-400"></p>
+                </div>
+            </div>
+
+            <!-- 2. BOTTOM BAR: Legal and Social Media -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8">
+
+                <!-- Copyright & Legal Links -->
+                <div
+                    class="text-sm flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 text-gray-400">
+                    <p class="order-2 md:order-1">&copy; 2026 Sandeep Yadav. All rights reserved.</p>
+                    <a href="#" class="footer-link order-1 md:order-2">Privacy Policy</a>
+                    <a href="#" class="footer-link order-1 md:order-2">Terms of Service</a>
+                    <a href="#skills" class="footer-link order-1 md:order-2">Sitemap</a>
+                </div>
+
+                <!-- Social Media Icons (Using simple SVG) -->
+                <div class="flex space-x-4 mt-6 md:mt-0 order-3">
+                    <!-- X (Twitter) -->
+                    <a href="https://twitter.com/@sandeepkumar73y" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-150" aria-label="Follow us on X">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.901 1.144h3.68l-8.08 9.224 9.17 12.02h-7.29l-5.6-7.38-6.16 7.38h-3.68l8.47-9.58-9.01-11.82h7.3l4.75 6.22L18.9 1.144zm.64 21.08l1.4-1.74-6.8-8.5-1.4 1.74 6.8 8.5z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/sandeep-kumar-386333204/" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-150" aria-label="Connect on LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.783 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.535-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <!-- GitHub (Added standard for developers) -->
+                    <a href="https://github.com/sandeepyadav73" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-150"
+                        aria-label="View projects on GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.332-1.758-1.332-1.758-1.08-.732.084-.716.084-.716 1.192.084 1.815 1.22 1.815 1.22 1.065 1.815 2.802 1.292 3.497.996.108-.77.419-1.292.762-1.583-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.465-2.381 1.222-3.218-.123-.305-.515-1.523.118-3.18 0 0 1.001-.322 3.287 1.218 1.954-.534 4.04-.534 5.994 0 2.285-1.54 3.286-1.218 3.286-1.218.633 1.657.24 2.875.118 3.18.757.837 1.221 1.906 1.221 3.218 0 4.59-2.807 5.624-5.476 5.922.42.361.789 1.121.789 2.259v3.315c0 .319.192.694.796.574C20.569 21.792 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- END PROFESSIONAL FOOTER SECTION -->
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
